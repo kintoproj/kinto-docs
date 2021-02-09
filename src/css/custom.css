@@ -1,0 +1,183 @@
+:root {
+  --ifm-color-primary: #764abc;
+  --ifm-color-primary-dark: #6a43a9;
+  --ifm-color-primary-darker: #5e3b96;
+  --ifm-color-primary-darkest: #533484;
+  --ifm-color-primary-light: #845cc3;
+  --ifm-color-primary-lighter: #916ec9;
+  --ifm-color-primary-lightest: #9f80d0;
+  --ifm-code-font-size: 95%;
+  --ifm-blockquote-color: #ecf4f9;
+  --ifm-blockquote-color-dark: #cbddea;
+  --ifm-link-text-color: #000000;
+  --ifm-code-padding-vertical: 0.1rem;
+  --ifm-code-padding-horizontal: 0.2rem;
+  --ifm-card-background: #ffffff;
+  --ifm-devTools-background: #f7f9fe;
+  --ifm-whiteSlant-image: url("/img/white-slant-light.svg") no-repeat;
+  --ifm-angular: url("/img/light/angular.svg");
+  --ifm-docker: url("/img/light/docker.svg");
+  --ifm-gatsby: url("/img/light/gatsby.svg");
+  --ifm-golang: url("/img/light/golang.svg");
+  --ifm-hugo: url("/img/light/hugo.svg");
+  --ifm-minio: url("/img/light/minio.svg");
+  --ifm-mongo: url("/img/light/mongo.svg");
+  --ifm-more: url("/img/light/more.svg");
+  --ifm-mysql: url("/img/light/mysql.svg");
+  --ifm-nextjs: url("/img/light/nextjs.svg");
+  --ifm-node: url("/img/light/node.svg");
+  --ifm-postgresql: url("/img/light/postgresql.svg");
+  --ifm-python: url("/img/light/python.svg");
+  --ifm-react: url("/img/light/react.svg");
+  --ifm-redis: url("/img/light/redis.svg");
+  --ifm-ruby: url("/img/light/ruby.svg");
+  --ifm-rust: url("/img/light/rust.svg");
+  --ifm-vue: url("/img/light/vue.svg");
+  --ifm-footer-background-color: #ffffff;
+  --ifm-footer-logo: url("/img/kinto-logo-dark.svg");
+}
+
+:root[data-theme="dark"] {
+  --ifm-color-primary: #ba8fff;
+  --ifm-color-primary-dark: #7431ca;
+  --ifm-color-primary-darker: #6d1cac;
+  --ifm-color-primary-darkest: #730c9a;
+  --ifm-color-primary-light: #b97cfd;
+  --ifm-color-primary-lighter: #cc8ffc;
+  --ifm-color-primary-lightest: #fcf2ff;
+  --ifm-blockquote-color: #1a1d1e;
+  --ifm-link-text-color: #ffffff;
+  --ifm-blockquote-color-dark: #6d1cac;
+  --ifm-card-background: #1e1e1e;
+  --ifm-devTools-background: #1c1c1c;
+  --ifm-whiteSlant-image: url("/img/white-slant-dark.svg") no-repeat;
+  --ifm-angular: url("/img/dark/angular.svg");
+  --ifm-docker: url("/img/dark/docker.svg");
+  --ifm-gatsby: url("/img/dark/gatsby.svg");
+  --ifm-golang: url("/img/dark/golang.svg");
+  --ifm-hugo: url("/img/dark/hugo.svg");
+  --ifm-minio: url("/img/dark/minio.svg");
+  --ifm-mongo: url("/img/dark/mongo.svg");
+  --ifm-more: url("/img/dark/more.svg");
+  --ifm-mysql: url("/img/dark/mysql.svg");
+  --ifm-nextjs: url("/img/dark/nextjs.svg");
+  --ifm-node: url("/img/dark/node.svg");
+  --ifm-postgresql: url("/img/dark/postgresql.svg");
+  --ifm-python: url("/img/dark/python.svg");
+  --ifm-react: url("/img/dark/react.svg");
+  --ifm-redis: url("/img/dark/redis.svg");
+  --ifm-ruby: url("/img/dark/ruby.svg");
+  --ifm-rust: url("/img/dark/rust.svg");
+  --ifm-vue: url("/img/dark/vue.svg");
+  --ifm-footer-background-color: #1c1c1c;
+  --ifm-footer-logo: url("/img/kinto-logo-light.svg");
+}
+
+blockquote {
+  color: var(--ifm-font-base-color);
+  background-color: var(--ifm-blockquote-color);
+  border-left: 6px solid var(--ifm-blockquote-color-dark);
+  border-radius: var(--ifm-global-radius);
+}
+
+.footerLogo {
+  background: var(--ifm-footer-logo) no-repeat;
+  height: 40px;
+}
+
+code {
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 0.2rem;
+}
+
+:root[data-theme="dark"] code {
+  background-color: rgb(39, 40, 34);
+}
+
+a code {
+  color: inherit;
+}
+
+.navbar .navbar__items {
+  flex: 1 1 auto;
+}
+
+.footer__logo {
+  width: 50px;
+  height: 50px;
+}
+
+.menu__link {
+  font-weight: normal;
+}
+
+.menu__link--sublist {
+  color: var(--ifm-font-base-color) !important;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.menu .menu__link.menu__link--sublist:after {
+  transform: rotateZ(180deg);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: linear, linear;
+  transition-delay: 0s, 0s;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.menu .menu__list-item.menu__list-item--collapsed .menu__link--sublist:after {
+  transform: rotateZ(90deg);
+}
+
+.codesandbox {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.style-guide details {
+  background-color: var(--ifm-blockquote-color);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.style-guide details summary {
+  cursor: pointer;
+}
+
+.style-guide details summary h4 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.style-guide details p {
+  margin-bottom: 0;
+}
+
+.style-guide .priority-rules h3:after {
+  margin-left: 1em;
+  font-size: 0.7em;
+  position: absolute;
+}
+
+.style-guide .priority-essential h3:after {
+  content: " ESSENTIAL";
+  color: var(--ifm-color-danger);
+}
+
+.style-guide .priority-stronglyrecommended h3:after {
+  content: " STRONGLY RECOMMENDED";
+  color: var(--ifm-color-warning);
+}
+
+.style-guide .priority-recommended h3:after {
+  content: " RECOMMENDED";
+  color: var(--ifm-color-info);
+}
