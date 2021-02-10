@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>KintoHub Documentation Blog</title>
+        <link>https://kintohub.com/blog</link>
+        <description>KintoHub Documentation Blog</description>
+        <lastBuildDate>Wed, 03 Feb 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Kinto OSS]]></title>
+            <link>https://kintohub.com/blog/2021/02/03/Kinto-OSS</link>
+            <guid>Kinto OSS</guid>
+            <pubDate>Wed, 03 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sample Post]]></description>
+        </item>
+    </channel>
+</rss>
