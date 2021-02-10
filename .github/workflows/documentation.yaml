@@ -1,7 +1,8 @@
 name: documentation
 
 on:
-  push
+  push:
+    branches: [main]
 
 jobs:
   gh-release:
@@ -28,7 +29,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./build
-          keep_files: true
           cname: kintohub.com
           # https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token
           github_token: ${{ secrets.GITHUB_TOKEN }}
