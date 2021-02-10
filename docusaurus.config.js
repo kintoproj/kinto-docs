@@ -2,7 +2,7 @@ module.exports = {
   title: "KintoHub Documentation",
   tagline:
     "Follow our examples and guides to deploy your full stack app in no time.",
-  url: "https://docs.kintohub.com",
+  url: "https://kintohub.com",
   baseUrl: "/",
   organizationName: "kintohub",
   projectName: "kintohub",
