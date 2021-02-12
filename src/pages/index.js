@@ -18,15 +18,14 @@ function Home() {
       <main>
         <header className={styles.alertContainer}>
           <div className={styles.alertBanner}>
-            KintoHub is now open-source software. A big announcement for
-            later...
+          The KintoHub team joins Cash App. Read more 
           </div>
 
           <Link
             to={useBaseUrl("/blog/2021/02/12/KintoHub-Team-Joins-Cash-App")}
             className={classnames(styles.alertLink, styles.linkNoHoverEffect)}
           >
-            LEARN MORE
+          HERE.
           </Link>
         </header>
         <section className={styles.heroBanner}>
