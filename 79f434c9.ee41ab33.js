@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[32],{101:function(t){t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Kinto OSS","permalink":"/blog/2021/02/03/Kinto-OSS"}]}')}}]);
