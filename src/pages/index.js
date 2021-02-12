@@ -23,7 +23,7 @@ function Home() {
           </div>
 
           <Link
-            to={useBaseUrl("blog")}
+            to={useBaseUrl("/blog/2021/02/12/KintoHub-Team-Joins-Cash-App")}
             className={classnames(styles.alertLink, styles.linkNoHoverEffect)}
           >
             LEARN MORE
