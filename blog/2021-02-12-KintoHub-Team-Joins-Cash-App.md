@@ -4,6 +4,7 @@ author: Joseph Cooper
 author_title: Co-founder and CEO @ KintoHub
 author_image_url: https://lh3.googleusercontent.com/a-/AOh14GhYZK9qCeJbVqSGcuqL-Y9XvsETwdv4SmNxjrHT=s70-p-k-no
 description: KintoHub Team Joins Cash App
+image: https://www.kintohub.com/img/kinto.svg
 ---
 
 Today, we’re excited to announce that KintoHub’s team will be joining [Cash App](https://cash.app/), an app that allows individuals to spend, send, store, and invest money!
