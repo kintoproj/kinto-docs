@@ -8,10 +8,10 @@ module.exports = {
   projectName: "kintohub",
   favicon: "favicon.ico",
   themeConfig: {
+    image: "img/kintohub-og.png",
     colorMode: {
       disableSwitch: false,
     },
-    image: "img/kintohub-og.png",
     prism: {
       theme: require("./src/js/monokaiTheme.js"),
     },
