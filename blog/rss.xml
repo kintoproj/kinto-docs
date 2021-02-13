@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>KintoHub Documentation Blog</title>
+        <title>KintoHub Blog</title>
         <link>https://kintohub.com/blog</link>
-        <description>KintoHub Documentation Blog</description>
+        <description>KintoHub Blog</description>
         <lastBuildDate>Fri, 12 Feb 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
