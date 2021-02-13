@@ -1,5 +1,5 @@
 module.exports = {
-  title: "KintoHub Documentation",
+  title: "KintoHub",
   tagline:
     "Follow our examples and guides to deploy your full stack app in no time.",
   url: "https://kintohub.com",
@@ -11,12 +11,12 @@ module.exports = {
     image: "https://www.kintohub.com/img/kintohub-og.png",
     colorMode: {
       disableSwitch: false,
-    },
+    }, 
     prism: {
       theme: require("./src/js/monokaiTheme.js"),
     },
     navbar: {
-      title: "KintoHub Docs",
+      title: "KintoHub",
       // image: "img/redux-logo-landscape.png",
       logo: {
         alt: "Kinto Logo",
@@ -41,7 +41,7 @@ module.exports = {
         { label: "Blog", to: "blog", position: "right" },
         {
           label: "Login",
-          to: "https://kintohub.com/login",
+          to: "https://app.kintohub.com/login",
           position: "right",
         },
         //{ label: 'FAQ', to: 'getting-started/faq', position: 'right' },
