@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[31],{98:function(p){p.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"KintoHub Team Joins Cash App","permalink":"/blog/2021/02/12/KintoHub-Team-Joins-Cash-App"}]}')}}]);
