@@ -8,7 +8,7 @@ module.exports = {
   projectName: "kintohub",
   favicon: "favicon.ico",
   themeConfig: {
-    image: "img/kintohub-og.png",
+    image: "https://www.kintohub.com/img/kintohub-og.png",
     colorMode: {
       disableSwitch: false,
     },
