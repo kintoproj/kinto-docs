@@ -17,16 +17,15 @@ function Home() {
     >
       <main>
         <header className={styles.alertContainer}>
-          <div className={styles.alertBanner}>
-          The KintoHub team joins Cash App. Read more 
-          </div>
-
-          <Link
-            to={useBaseUrl("/blog/2021/02/12/KintoHub-Team-Joins-Cash-App")}
-            className={classnames(styles.alertLink, styles.linkNoHoverEffect)}
-          >
-          HERE.
-          </Link>
+          <span className={styles.alertBanner}>
+            The KintoHub team joins Cash App.{" "}
+            <Link
+              to={useBaseUrl("/blog/2021/02/12/KintoHub-Team-Joins-Cash-App")}
+              className={classnames(styles.alertLink, styles.linkNoHoverEffect)}
+            >
+              Read more
+            </Link>
+          </span>
         </header>
         <section className={styles.heroBanner}>
           <div className={styles.heroBannerText}>
