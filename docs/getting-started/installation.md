@@ -64,7 +64,7 @@ helm upgrade --install argo \
 
 ### Install KintoHub
 
-Check out the [helm chart repository](https://github.com/kintoproj/kinto-helm) and adapt the [values.yaml](./values.yaml) file accordingly for your own need.
+Check out the [helm chart repository](https://github.com/kintoproj/kinto-helm) and adapt the values.yaml file accordingly for your own need.
 Checks specifically for any `## TO BE CHANGED` pattern in it and change the values.
 Notes: you can also provide the parameters directly into the command line using `--set`.
 
