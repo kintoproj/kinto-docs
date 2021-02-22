@@ -3,143 +3,195 @@ id: cli
 title: Command Line Interface (CLI)
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-KintoHub has a command line interface (CLI) which can be used to debug and interact with your services.
+KintoHub provides a command line interface (CLI) which can be used to debug and interact with your services.
 
 The CLI is currently an open source **ALPHA** utility that we are working on.
-Contributions are welcomed at [kintohub/kinto-cli](https://github.com/kintohub/kinto-cli)
+Contributions are welcomed at [kintoproj/kinto-cli](https://github.com/kintoproj/kinto-cli)
 
-## Install
+## <u>Installation</u>
 
 <Tabs
   defaultValue="mac"
   values={[
     {label: 'Mac', value: 'mac'},
-    {label: 'Windows', value: 'windows'},
     {label: 'Linux', value: 'linux'},
+    {label: 'Windows', value: 'windows'}
   ]}>
   <TabItem value="mac">
     You can install kinto-cli with the following command within your terminal:
 
-    curl -L https://cli.kinto.io/install.sh | bash
-  </TabItem>
-  <TabItem value="windows">
-    You can install kinto-cli with the following command within your Powershell terminal:
+    curl -L https://raw.githubusercontent.com/kintoproj/kinto-cli/main/install.sh | bash
 
-    iex (new-object net.webclient).downloadstring('https://cli.kinto.io/install.ps1')
   </TabItem>
   <TabItem value="linux">
     You can install kinto-cli with the following command within your terminal:
 
-    curl -L https://cli.kinto.io/install.sh | bash
+    curl -L https://raw.githubusercontent.com/kintoproj/kinto-cli/main/install.sh | bash
+
   </TabItem>
+  <TabItem value="windows">
+    You can install kinto-cli with the following command within your Powershell terminal:
+
+    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/kintoproj/kinto-cli/main/install.ps1')
+
+  </TabItem>
+ 
 </Tabs>
 
-## Upgrade
+## <u>Upgrade</u>
 
 To upgrade the CLI to the latest version, re-run the commands in the installation step.
 
-## Commands
+## <u>Commands</u>
 
-### kinto login
-
-This will allow you to login to your KintoHub account
-
-### kinto env
-
-Lists all environments on your account
+## Init
 
 ```
-➜  backend-api-template git:(master) ✗ kinto env
-SUCCESS:  Available environments:
-+--------------------------+-----------------+---------------+
-|          ENV ID          |      NAME       |    REGION     |
-+--------------------------+-----------------+---------------+
-| 5f043ec54101fe821c26d7bf | dev             | North America |
-+--------------------------+-----------------+---------------+
-| 5f066e8a85baef4fb0ae8b55 | asdf            | Europe        |
-+--------------------------+-----------------+---------------+
-| 5f07c44074d9403badce5685 | test            | Asia          |
-+--------------------------+-----------------+---------------+
-| 5f081aaa6b3d7dd0cb612885 | dev2            | Asia          |
-+--------------------------+-----------------+---------------+
-| 5f0d759f16f0e82d6cf777dc | coolexample     | Asia          |
-+--------------------------+-----------------+---------------+
+kinto init {coreHost}
 ```
 
-**Requirements**
-* This command requires you to be logged in.
+Switches the `coreHost` of **KintoHub** instance for future CLI commands.
 
-
-### kinto status
-
-Lists all environments that the `.git` repository has been deployed to.
+## Reset
 
 ```
-➜  backend-api-template git:(master) ✗ kinto status
+kinto init reset
+```
+
+Will reset your CLI `coreHost` and set it to `null`
+
+## Environment
+
+- ### Fetch Environments:
+
+  ```
+  kinto env
+  ```
+
+  Lists all environments on the current cluster
+
+  ```bash
+  ➜ nodejs git:(master) kinto-env
+  SUCCESS:  Available environments:
+  +--------------------------+--------------------------+
+  |          ENV ID          |           NAME           |
+  +--------------------------+--------------------------+
+  | 600adbfe463f2bc6d33be6d3 | staging                  |
+  +--------------------------+--------------------------+
+  | 600f12ceb32a91c8d7b3f72d | dev                      |
+  +--------------------------+--------------------------+
+  | 60137e1851b6d4295d39d422 | production               |
+  +--------------------------+--------------------------+
+  ```
+
+- ### Port-Forward environment:
+
+  ```
+  kinto env access [environment-id]
+  ```
+
+  Allows you to port-forward all remote services inside a particular environment to your local machine. You will be prompted to choose an environment if the optional **[environment-id]** argument was not supplied.
+
+## Status
+
+```
+kinto status
+```
+
+Lists all environments that current `.git` repository has been deployed to.
+
+> **Requirements** -- Command must be executed from within a `.git` repository
+
+```bash
+➜ nodejs git:(master) kinto-status
 SUCCESS:  Repo is deployed to these environments:
-+----------+-----------------------------+
-| ENV  NAME |        SERVICE NAME        |
-+----------+-----------------------------+
-| dev       | backendapitemplate         |
-+----------+-----------------------------+
-| dev2      | backendapitemplate-4a5638b |
-+----------+-----------------------------+
-| dev3      | backendapitemplate-7beb0ce |
-+----------+-----------------------------+
-| dev4      | backendapitemplate-e1747df |
-+----------+-----------------------------+
-| dev5      | backendapitemplate-fc8a681 |
-+----------+-----------------------------+
++------------+--------------+
+|  ENV NAME  | SERVICE NAME |
++------------+--------------+
+| dev        | nodejs       |
++------------+--------------+
+| staging    | nodejs       |
++------------+--------------+
 ```
 
-**Requirements**
-* This command requires you to be logged in.
-* Command must be ran within a `.git` repository
+## Service
 
-### kinto svs [environmentId]
+- ### Fetch Services
 
-You will be prompted to choose an environment if the optional **[environmentId]** argument was not supplied.
-This command will list all services within the chosen environment.
+  ```
+  kinto svs [environment-id]
+  ```
 
-**Requirements**
-* This command requires you to be logged in.
+  List all services within the chosen environment.
+  You will be prompted to choose an environment if the optional **[environment-id]** argument is not supplied.
 
-### kinto teleport {--flags}
+- ### Port-Forward Service
+  ```
+  kinto svs access {environmentId} {serviceId}
+  ```
+  Allows you to port-forward a specific remote service inside a particular environment to your local machine. You need to pass the mandotary **{environmentId}** and **{serviceId}** for this command.
 
-This command will port-forward all of your remote services belonging to your **local git repository** , from the chosen environment to your local machine.
-You will be prompted to choose an environment.
+## Access
 
 ```
-➜  backend-api-template git:(master) ✗ kinto teleport
-? Select environment: dev
+kinto access
+```
+
+> **Requirements** -- Command must be executed from within a `.git` repository
+
+This command will port-forward all of your remote services belonging to your **local git repository** , from the chosen environment, to your local machine. You will be prompted to choose an environment.
+
+```bash
+➜ nodejs git:(master) kinto-access
+? Select environment: 1. staging
+
 INFO:     Starting Tunnel
-INFO:     > Forwarding: localhost:5360 => elixir-examples:80
-INFO:     > Forwarding: localhost:5361 => kintohub:80
-INFO:     > Forwarding: localhost:5362 => kintohub-2a5f0f2:80
+INFO:     Forwarding  > localhost:5360 => nodejs:80
+INFO:     Forwarding  > localhost:5361 => testfluentd:80
 SUCCESS:  Connected!
 
-Press any key to close the tunnel
+Press CTRL+C to close the tunnel
 ```
-#### Available Flags : 
-`--all` : Removes local git restrictions and allows teleporting all available services inside any environment.
 
-### kinto version
+## Teleport
 
-Displays the CLI version
+```
+kinto teleport
+```
 
-### kinto help
+> **Requirements** -- Command must be ran within a `.git` repository
 
-Displays a list of available commands
+This command will redirect all the traffic for a single remote service, belonging to your **local git repository** and port-forward rest of the remaining remote services, from the chosen environment to your local machine. You will be prompted to choose an environment.
 
-### kinto init {hostName}
+```bash
+➜ nodejs git:(master) kinto-cli teleport
+? Select environment: 1. staging
 
-**Recommended for enterprise users only**
+INFO:     Starting Tunnel
+INFO:     Teleporting > localhost:8080 => R:0.0.0.0:3000
+INFO:     Forwarding  > localhost:5361 => testfluentd:80
 
-Switches the target **KintoHub** cluster for future CLI commands.
+WARNING:  Please start your local server at PORT => 8080
+SUCCESS:  Connected!
 
-#### Reset to default settings
-`kinto init default` will reset your CLI to the default settings
+Press CTRL+C to close the tunnel
+```
 
+## Version
+
+```
+kinto version
+```
+
+Displays the current CLI version.
+
+## Help
+
+```
+kinto help
+```
+
+Displays a list of available commands.
