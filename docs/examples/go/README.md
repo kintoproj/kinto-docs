@@ -3,7 +3,6 @@ id: go-example
 title: Go
 ---
 
-
 A sample Go app for [KintoHub](https://kintohub.com)
 
 ## :rocket: Deploying on KintoHub
@@ -41,9 +40,6 @@ $ go build main.go
 $ ./main
 ```
 
-
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

@@ -7,16 +7,15 @@ Settings allow you modify the way your service behaves and/or critical operation
 
 ## Viewing Service Settings
 
-1. Login to KintoHub
-2. Choose your environment you are interested in viewing at the top left.
-3. Choose the service from the services list you are interested in editing.
-4. Click the `Settings` at the far right.
+1. Choose your environment you are interested in viewing at the top left.
+2. Choose the service from the services list you are interested in editing.
+3. Click the `Settings` at the far right.
 
 ![Settings Tab](/img/features/settings.png)
 
 ## CI/CD
 
-It's coming soon! Hang tight.
+Check out [CI/CD](features-ci-cd.md) for more information.
 
 ## Public API
 

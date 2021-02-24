@@ -10,10 +10,9 @@ A **Restart** is when your service has crashed and KintoHub has automatically br
 
 ## View Metrics
 
-1. Login to KintoHub
-2. Choose your environment you are interested in deploying into at the top left.
-3. Create any service or select a previous service you have made.
-4. By default, you will be placed on the **Overview** tab.
+1. Choose your environment you are interested in deploying into at the top left.
+2. Create any service or select a previous service you have made.
+3. By default, you will be placed on the **Overview** tab.
 
 ## Metrics Information
 
@@ -21,7 +20,7 @@ A **Restart** is when your service has crashed and KintoHub has automatically br
 
 Shows the total amount of resources that your entire service is taking up.
 
-- **Memory** - The total memory and memory usage our service is using
+- **Memory** - The total memory and memory usage our service is using.
 - **vCPU** - The total vCPU and vCPU usage your service is using
   - When vCPU is shared, the value will be shown as **SHARED** and you will not be able to monitor usage.
 
@@ -31,12 +30,12 @@ Shows the total amount of resources that your entire service is taking up.
 
 Instances are individual live and running apps that make up your service.
 
-- **Name/Instance** - The unique name and instance identifier
+- **Name/Instance** - The unique name and instance identifier.
 - **vCPU** - Usage and dedicated vCPU allocated to your instance.
   - When vCPU is shared, the value will be shown as **SHARED** and you will not be able to monitor usage.
-- **Memory** - Usage and dedicated memory allocated to your instance
-- **Restarts** - Number of times your service has crashed and recovered
-- **Status** - The health of your instance
+- **Memory** - Usage and dedicated memory allocated to your instance.
+- **Restarts** - Number of times your service has crashed and recovered.
+- **Status** - The health of your instance.
   - **Healthy** - Readily available to serve traffic
   - **Unhealthy** - Currently not available and is either starting up or has crashed
   - **Completed** - Service has been terminated due to a `Deploy` or `Restart` action

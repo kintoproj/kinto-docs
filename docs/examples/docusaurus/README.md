@@ -34,6 +34,7 @@ $ cd docusaurus/website
 ```
 $ npm install
 ```
+
 - Build the app
 
 ```
@@ -46,9 +47,6 @@ $ npm run build
 $ npm run start
 ```
 
-
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

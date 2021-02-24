@@ -34,32 +34,34 @@ $ cd django
 $ pip install -r requirements.txt
 ```
 
-- To start the app 
+- To start the app
 
 ```
 $ python manage.py runserver 0.0.0.0:80
 ```
+
 ## :zap: API Call
 
 **Local:**
+
 ```
 curl -X GET http://localhost/hello/world
 ```
 
 **On KintoHub:**
+
 ```
 curl -X GET http://<KintohubHostURL>/hello/world
 ```
 
 #### Response
+
 ```json
 {
   "message": "Hello world"
 }
-``` 
+```
 
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup
