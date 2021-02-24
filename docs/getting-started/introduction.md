@@ -4,8 +4,6 @@ title: Introduction
 
 ---
 
-# Kubernetes with CI/CD
-
 ## What is Kintohub
 
 KintoHub is an open source build and deployment platform designed with a developer-friendly interface for Kubernetes.
