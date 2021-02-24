@@ -3,7 +3,6 @@ id: ruby-example
 title: Ruby
 ---
 
-
 A sample ruby app for [KintoHub](https://kintohub.com)
 
 ## :rocket: Deploying on KintoHub
@@ -40,10 +39,9 @@ $ gem install bundler && bundle install
 ```
 $ bundle exec ruby app.rb
 ```
+
 > Default port 8000 (port can be set by setting PORT env variable)
 
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

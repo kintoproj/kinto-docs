@@ -14,26 +14,25 @@ The following service types support **Custom domains**:
 
 ## Setting up a Domain
 
-1. Login to KintoHub
-2. Choose your environment you are interested in deploying into at the top left.
-3. Create or select an existing **Web App**, **Website** or **Backend API** service to edit
-4. Click on the **Domains** tab near the top center of the Service page.
+1. Choose your environment you are interested in deploying into at the top left.
+2. Create or select an existing **Web App**, **Website** or **Backend API** service to edit.
+3. Click on the **Domains** tab near the top center of the Service page.
 
 ![Domain](/img/features/domain.png)
 
 5. Enter in your domain or subdomain you wish to map to your service.
-6. Click on the **Add Domain** button
+6. Click on the **Add Domain** button.
 
 ![Add Domain](/img/features/add-domain.png)
 
-7. Follow the instructions to add a **CNAME** key and value to your DNS host provider
-8. Once complete click on the **OK** button
+7. Follow the instructions to add a **CNAME** key and value to your DNS host provider.
+8. Once complete click on the **OK** button.
 
 ## Domain Status
 
 Let's Encrypt SSL certificates expire every few months.
 KintoHub will automatically renew your SSL certificate without any downtime of your service.
-Your Let's Encrypt certificate status is displayed under **SSL Status**
+Your Let's Encrypt certificate status is displayed under **SSL Status**.
 
 ## Remove Domain
 

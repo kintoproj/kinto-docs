@@ -15,12 +15,12 @@ This example will deploy a **Todo List App** using `React`, `Hasura`, and `Postg
 To store your data, you will need a Postgres database.
 KintoHub provides a dedicated Postgres server with 1 GB of storage.
 
-1. Click on the **Create Service** button displayed at the top right of your environment
-2. Click on the **From Catalog** tab
+1. Click on the **Create Service** button displayed at the top right of your environment.
+2. Click on the **From Catalog** tab.
 
 ![Catalog](/img/fullstack-example/catalog.png)
 
-3. Click on **PostgreSQL** service
+3. Click on **PostgreSQL** service.
 4. Enter or generate your `Username`, `Password`, and `Root Password`.
 5. Click on the **Deploy** button at the top right.
 
@@ -38,17 +38,17 @@ Copy the **Connection String (Admin)** and paste it in a notepad to use for the 
 This tutorial has a premade Hasura repository with migration files available.
 You can deploy it with the following steps:
 
-1. Click on the **Create Service** button at the top right
-2. Click on the **Web App** service
-3. Click on the **Import URL** tab
-4. Copy and paste the following into the **Repository URL** `https://github.com/kintohub/todo-hasura`
-5. Click on the **Connect** button
-6. Type `Dockerfile` in the **Dockerfile Name** field
-7. Type `8080` in the **Port** field
-8. Click the **Environment Variables** tab
-9. Add the **key** `HASURA_GRAPHQL_DATABASE_URL` and paste in the **Connection String (Admin)** from the previous step as the **value**
-10. Add the **key** `HASURA_GRAPHQL_ENABLE_CONSOLE` and enter the value `true`
-11. Click on the **Deploy** button at the top right
+1. Click on the **Create Service** button at the top right.
+2. Click on the **Web App** service.
+3. Click on the **Import URL** tab.
+4. Copy and paste the following into the **Repository URL** `https://github.com/kintohub-examples/todo-hasura`.
+5. Click on the **Connect** button.
+6. Type `Dockerfile` in the **Dockerfile Name** field.
+7. Type `8080` in the **Port** field.
+8. Click the **Environment Variables** tab.
+9. Add the **key** `HASURA_GRAPHQL_DATABASE_URL` and paste in the **Connection String (Admin)** from the previous step as the **value**.
+10. Add the **key** `HASURA_GRAPHQL_ENABLE_CONSOLE` and enter the value `true`.
+11. Click on the **Deploy** button at the top right.
 
 <img
   alt="Hasura Environment Variables"
@@ -57,7 +57,7 @@ You can deploy it with the following steps:
 
 This will take around **30 Seconds** to complete.
 Once complete, you can click the link to the right of **Public API access via**
-You will now see Hasura's dashboard and can copy the **GraphQL Endpoint URL**
+You will now see Hasura's dashboard and can copy the **GraphQL Endpoint URL**.
 
 <img
   alt="Hasura Console"
@@ -69,16 +69,16 @@ You will now see Hasura's dashboard and can copy the **GraphQL Endpoint URL**
 This tutorial has a premade React Todo List App that works with Hasura.
 You can deploy it with the following steps:
 
-1. Click on the **Create Service** button at the top right
-2. Click on the **Web App** service
-3. Click on the **Import URL** tab
-4. Copy and paste the following into the **Repository URL** `https://github.com/kintohub/todo-react`
-5. Click on the **Connect** button
-6. Type `Dockerfile` in the **Dockerfile Name** field
-7. Type `5000` in the **Port** field
-8. Click on the **Environment Variables** tab
-9. Add the **key** `REACT_APP_SERVER_URL` and paste the **GraphQL Endpoint URL** from the previous step as the **value**
-10. Click on the **Deploy** button
+1. Click on the **Create Service** button at the top right.
+2. Click on the **Web App** service.
+3. Click on the **Import URL** tab.
+4. Copy and paste the following into the **Repository URL** `https://github.com/kintohub-examples/todo-react`.
+5. Click on the **Connect** button.
+6. Type `Dockerfile` in the **Dockerfile Name** field.
+7. Type `5000` in the **Port** field.
+8. Click on the **Environment Variables** tab.
+9. Add the **key** `REACT_APP_SERVER_URL` and paste the **GraphQL Endpoint URL** from the previous step as the **value**.
+10. Click on the **Deploy** button.
 
 <img
   alt="React Webapp Environment Variables"
@@ -86,15 +86,4 @@ You can deploy it with the following steps:
 />
 
 This will take around **3 Minutes** to complete.
-Once complete, you can click the link to the right of **Public API access via**
-
-## Optimize Cost
-
-**Congratulations! You have finished the full stack tutorial.**
-
-If you are on a paid account and have already used your monthly free credits, the total cost of this environment can be optimized to a max cost of **$4.34** USD per month.
-To do this, update your services with the following:
-
-- Lower the [memory](/features/features-advanced.md#memory) of **todo-hasura** from `256` to `128` MB of memory
-- Lower the [memory](/features/features-advanced.md#memory) of **postgres** from `256` to `128` MB of memory
-- Lower the [memory](/features/features-advanced.md#memory) of **todo-react** from `256` to `32` MB of memory
+Once complete, you can click the link to the right of **Public API access via**.

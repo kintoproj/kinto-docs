@@ -50,6 +50,4 @@ $ npm run dev
 
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

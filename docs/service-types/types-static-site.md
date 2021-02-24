@@ -7,10 +7,6 @@ KintoHub supports hosting of websites built with static site generator framework
 
 ![Static](/img/features/static-service.png)
 
-Very soon KintoHub will provide a feature to allow users to integrate and deploy continuously with CI/CD. If you are keen to see this feature in action, vote for it [here](https://feedback.kintohub.com/feature-requests/p/cicd).
-
-![CI](/img/features/integration.png)
-
 ## When to use a static site?
 
 Static websites are a good choice when you want to couple them with content delivery networks (CDN) or have a website that does not require a port.

@@ -4,12 +4,13 @@ module.exports = {
       "getting-started/introduction",
       "getting-started/fullstack-example",
     ],
-    "Features": [
+    Features: [
       "features/cli",
       "features/environment",
       `features/deploy`,
       "features/metrics",
       "features/releases",
+      "features/ci-cd",
       "features/job-history",
       "features/console-logs",
       "features/access",
@@ -18,10 +19,9 @@ module.exports = {
       "features/build-settings",
       "features/environment-variables",
       "features/advanced",
-      "features/billing",
     ],
 
-    Repository: ["repository/import url", "repository/github-apps"],
+    Repository: ["repository/import url"],
 
     "Service Types": [
       "service-types/static-site",

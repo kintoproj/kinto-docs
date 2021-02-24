@@ -293,12 +293,12 @@ function Home() {
 
             <div className={styles.infoCardSmall}>
               <Link
-                to={useBaseUrl("https://discord.com/invite/E2CMjKP")}
+                to={useBaseUrl("https://join.slack.com/t/kintogoons/signup")}
                 className={classnames(styles.link, styles.linkNoHoverEffect)}
               >
                 <div>
                   <img className={styles.icon} src="/img/forum.svg"></img>
-                  <h4 className={styles.primaryText}>Join Our Discord</h4>
+                  <h4 className={styles.primaryText}>Join Our Slack</h4>
                   <h5 className={styles.secondaryText}>
                     Get straight answers from our developers.
                   </h5>

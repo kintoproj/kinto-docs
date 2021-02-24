@@ -2,6 +2,7 @@
 id: elixir-example
 title: Elixir
 ---
+
 A sample elixir app for [KintoHub](https://kintohub.com)
 
 ## :rocket: Deploying on KintoHub
@@ -57,12 +58,11 @@ $ mix run --no-halt
 After running this command, open `localhost:3000` in your browser to view the response sent.
 
 #### Response sent
+
 ```
   Hello world
-``` 
+```
 
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

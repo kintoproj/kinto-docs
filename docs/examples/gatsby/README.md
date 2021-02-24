@@ -29,7 +29,7 @@ $ git clone https://github.com/kintohub-examples/gatsby
 $ cd gatsby
 ```
 
-- Install the gatsby-cli 
+- Install the gatsby-cli
 
 ```
 $ npm install -g gatsby-cli
@@ -47,9 +47,6 @@ $ gatsby build
 $ gatsby serve
 ```
 
-
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

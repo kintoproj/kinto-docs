@@ -3,7 +3,6 @@ id: nodejs-example
 title: Node
 ---
 
-
 A sample node service for [KintoHub](https://kintohub.com)
 
 ## :rocket: Deploying on KintoHub
@@ -43,6 +42,4 @@ $ npm run start
 
 ## :ambulance: Support
 
-**Contact us:** https://www.kintohub.com/contact-us
-
-**Discord:** https://kintohub.com/discord
+**Slack:** https://join.slack.com/t/kintogoons/signup

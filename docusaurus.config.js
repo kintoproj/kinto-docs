@@ -11,7 +11,7 @@ module.exports = {
     image: "https://www.kintohub.com/img/kintohub-og.png",
     colorMode: {
       disableSwitch: false,
-    }, 
+    },
     prism: {
       theme: require("./src/js/monokaiTheme.js"),
     },
@@ -68,8 +68,8 @@ module.exports = {
               to: "/blog",
             },
             {
-              label: "Example",
-              to: "/getting-started/faq",
+              label: "Examples",
+              to: "/examples/nodejs/nodejs-example",
             },
           ],
         },
@@ -77,20 +77,8 @@ module.exports = {
           title: "Community",
           items: [
             {
-              label: "Discord Community",
-              href: "https://discordapp.com/invite/E2CMjKP",
-            },
-            {
-              label: "Roadmap",
-              href: "https://feedback.kintohub.com/",
-            },
-            {
-              label: "Request Features",
-              href: "https://feedback.kintohub.com/feature-requests",
-            },
-            {
-              label: "Report a Bug",
-              href: "https://feedback.kintohub.com/bugs",
+              label: "Slack Community",
+              href: "https://join.slack.com/t/kintogoons/signup",
             },
           ],
         },
@@ -100,15 +88,6 @@ module.exports = {
             {
               label: "GitHub",
               href: "https://github.com/kintohub/",
-            },
-            {
-              label: "Twitter",
-              href: "http://twitter.com/kintohub",
-            },
-
-            {
-              label: "LinkedIn",
-              href: "https://www.linkedin.com/company/kintohub/",
             },
           ],
         },

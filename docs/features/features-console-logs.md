@@ -8,20 +8,15 @@ As long as your app is writing logs to the console or tail, KintoHub will pick u
 Console **does not** read logs files.
 Once your service restarts, your logs will be gone forever.
 
-:::note
-We are looking into storing historic logs for you. Vote for the feature [here](https://feedback.kintohub.com/feature-requests/p/historic-console-logs)
-:::
-
 :::tip
 Use 3rd party services like Datadog to capture your logs for long term storage and analysis.
 :::
 
 ## View Console
 
-1. Login to KintoHub
-2. Choose your environment you are interested in viewing at the top left.
-3. Choose the service from the services list you are interested in editing.
-4. Click on the **Console** tab in the upper center of the screen.
+1. Choose your environment you are interested in viewing at the top left.
+2. Choose the service from the services list you are interested in editing.
+3. Click on the **Console** tab in the upper center of the screen.
 
 ![console](/img/features/console.png)
 
