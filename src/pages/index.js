@@ -293,7 +293,7 @@ function Home() {
 
             <div className={styles.infoCardSmall}>
               <Link
-                to={useBaseUrl("https://join.slack.com/t/kintogoons/signup")}
+                to={useBaseUrl("https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA")}
                 className={classnames(styles.link, styles.linkNoHoverEffect)}
               >
                 <div>
