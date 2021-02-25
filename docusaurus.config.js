@@ -78,7 +78,7 @@ module.exports = {
           items: [
             {
               label: "Slack Community",
-              href: "https://join.slack.com/t/kintogoons/signup",
+              href: "https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA",
             },
           ],
         },

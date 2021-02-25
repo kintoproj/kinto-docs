@@ -44,4 +44,4 @@ $ bundle exec ruby app.rb
 
 ## :ambulance: Support
 
-**Slack:** https://join.slack.com/t/kintogoons/signup
+**Slack:** https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA
