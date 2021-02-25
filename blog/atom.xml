@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kintohub.com/blog</id>
     <title>KintoHub Blog</title>
-    <updated>2021-02-12T00:00:00.000Z</updated>
+    <updated>2021-02-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kintohub.com/blog"/>
     <subtitle>KintoHub Blog</subtitle>
     <icon>https://kintohub.com/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[KintoHub - A New Player To Open Source]]></title>
+        <id>KintoHub - A New Player To Open Source</id>
+        <link href="https://kintohub.com/blog/2021/02/25/KintoHub--A-New-Player-To-Open-Source"/>
+        <updated>2021-02-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[KintoHub - A New Player To Open Source]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[KintoHub Team Joins Cash App]]></title>
         <id>KintoHub Team Joins Cash App</id>

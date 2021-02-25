@@ -4,9 +4,16 @@
         <title>KintoHub Blog</title>
         <link>https://kintohub.com/blog</link>
         <description>KintoHub Blog</description>
-        <lastBuildDate>Fri, 12 Feb 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Feb 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[KintoHub - A New Player To Open Source]]></title>
+            <link>https://kintohub.com/blog/2021/02/25/KintoHub--A-New-Player-To-Open-Source</link>
+            <guid>KintoHub - A New Player To Open Source</guid>
+            <pubDate>Thu, 25 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[KintoHub - A New Player To Open Source]]></description>
+        </item>
         <item>
             <title><![CDATA[KintoHub Team Joins Cash App]]></title>
             <link>https://kintohub.com/blog/2021/02/12/KintoHub-Team-Joins-Cash-App</link>
