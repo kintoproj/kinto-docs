@@ -4,7 +4,7 @@ title: Introduction
 
 ---
 
-## What is Kintohub
+## What is Kintohub?
 
 KintoHub is an open source build and deployment platform designed with a developer-friendly interface for Kubernetes.
 
@@ -13,7 +13,7 @@ KintoHub is an open source build and deployment platform designed with a develop
 - Generate TLS certificates automatically for supporting HTTPS for your applications    
 - Fullstack - you can deploy websites/APIs/jobs and even databases
 
-## Why Kintohub
+## Why Kintohub?
 
 - You write the code, and we handle the rest
 - Cloud agnostic and can run on any Kubernetes cluster
