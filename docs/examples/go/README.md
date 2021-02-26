@@ -8,8 +8,8 @@ A sample Go app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Web App
-- **Repo:** https://github.com/kintohub-examples/go
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/go
+- **Branch:** main
 - **Language:** Go
 - **Language version:** 1.10.0
 - **Build Command:** `go build main.go`
@@ -23,7 +23,7 @@ A sample Go app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/go
+$ git clone https://github.com/kintoproj/kinto-examples
 
 $ cd go
 ```

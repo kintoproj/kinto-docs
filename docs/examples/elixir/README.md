@@ -8,8 +8,8 @@ A sample elixir app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintohub-examples/elixir
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/elixir
+- **Branch:** main
 - **Language:** Elixir
 - **Language version:** 1.10
 - **Build Command:** `mix local.hex --force && mix local.rebar --force && mix deps.get --quiet && mix`
@@ -25,8 +25,8 @@ An **Elixir** example can be deployed using `Dockerfile` on KintoHub
 ### :dolphin: Deploying with Dockerfile
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintohub-examples/elixir
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Branch:** main
 - **Language:** Dockerfile
 - **Dockerfile Name:** Dockerfile
 - **Port:** 3000

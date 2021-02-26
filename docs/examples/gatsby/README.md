@@ -8,8 +8,8 @@ A sample Gatsby app for [KintoHub](https://kintohub.com)
 ### :rocket: Deploying on KintoHub
 
 - **Service Type:** Static Site
-- **Repo:** https://github.com/kintohub-examples/gatsby
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/gatsby
+- **Branch:** main
 - **Language:** NodeJS
 - **Version:** 13
 - **Build:** `npm install && npm run build`
@@ -24,7 +24,7 @@ This will take a few minutes to deploy. Then click on the **Access** tab and cop
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/gatsby
+$ git clone https://github.com/kintoproj/kinto-examples
 
 $ cd gatsby
 ```

@@ -8,8 +8,8 @@ A sample Django app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintohub-examples/django
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/django
+- **Branch:** main
 - **Language:** Python
 - **Language version:** 3.7
 - **Build Command:** `pip install -r requirements.txt`
@@ -23,7 +23,7 @@ A sample Django app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/django
+$ git clone https://github.com/kintoproj/kinto-examples
 
 $ cd django
 ```

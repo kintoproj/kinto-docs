@@ -8,8 +8,8 @@ A sample NextJS with Apollo app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Web App
-- **Repo:** https://github.com/kintohub-examples/nextjs
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/nextjs
+- **Branch:** main
 - **Language:** NodeJS
 - **Language version:** 13
 - **Build Command:** `npm install && npm run build`
@@ -23,7 +23,7 @@ A sample NextJS with Apollo app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/nextjs
+$ git clone https://github.com/kintoproj/kinto-examples
 
 $ cd nextjs
 ```
