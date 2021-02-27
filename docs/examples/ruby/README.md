@@ -26,7 +26,7 @@ A sample ruby app for [KintoHub](https://kintohub.com)
 ```
 $ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd ruby
+$ cd kinto-examples/ruby
 ```
 
 - Install the dependencies

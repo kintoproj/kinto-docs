@@ -26,7 +26,7 @@ A sample Hapi app for [KintoHub](https://kintohub.com)
 ```
 $ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd hapi
+$ cd kinto-examples/hapi
 ```
 
 - Install the dependencies

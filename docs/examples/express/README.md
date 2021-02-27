@@ -26,7 +26,7 @@ A sample Express app for [KintoHub](https://kintohub.com)
 ```
 $ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd express
+$ cd kinto-examples/express
 ```
 
 - Install the dependencies

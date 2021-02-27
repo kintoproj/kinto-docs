@@ -26,7 +26,7 @@ A sample Django app for [KintoHub](https://kintohub.com)
 ```
 $ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd django
+$ cd kinto-examples/django
 ```
 
 - Build the app
