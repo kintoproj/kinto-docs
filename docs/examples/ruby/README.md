@@ -8,8 +8,9 @@ A sample ruby app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Web App
-- **Repo:** https://github.com/kintohub-examples/ruby
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./ruby
+- **Branch:** main
 - **Language:** Ruby
 - **Language version:** 2.5
 - **Build Command:** `gem install bundler && bundle install`
@@ -23,9 +24,9 @@ A sample ruby app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/ruby
+$ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd ruby
+$ cd kinto-examples/ruby
 ```
 
 - Install the dependencies

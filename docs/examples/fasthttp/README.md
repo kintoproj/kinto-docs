@@ -8,8 +8,9 @@ A sample Fasthttp app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintohub-examples/fasthttp
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./fasthttp
+- **Branch:** main
 - **Language:** Go
 - **Language version:** 1.13
 - **Build Command:** `go build -o main .`
@@ -23,9 +24,9 @@ A sample Fasthttp app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/fasthttp
+$ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd fasthttp
+$ cd kinto-examples/fasthttp
 ```
 
 - Build the app

@@ -8,8 +8,9 @@ A sample Flask app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintohub-examples/flask
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./flask
+- **Branch:** main
 - **Language:** Python
 - **Language version:** 3.7
 - **Build Command:** `pip install -r requirements.txt`
@@ -23,9 +24,9 @@ A sample Flask app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/flask
+$ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd flask
+$ cd kinto-examples/flask
 ```
 
 - Build the app

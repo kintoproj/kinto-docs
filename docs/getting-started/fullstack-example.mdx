@@ -41,14 +41,15 @@ You can deploy it with the following steps:
 1. Click on the **Create Service** button at the top right.
 2. Click on the **Web App** service.
 3. Click on the **Import URL** tab.
-4. Copy and paste the following into the **Repository URL** `https://github.com/kintohub-examples/todo-hasura`.
-5. Click on the **Connect** button.
-6. Type `Dockerfile` in the **Dockerfile Name** field.
-7. Type `8080` in the **Port** field.
-8. Click the **Environment Variables** tab.
-9. Add the **key** `HASURA_GRAPHQL_DATABASE_URL` and paste in the **Connection String (Admin)** from the previous step as the **value**.
-10. Add the **key** `HASURA_GRAPHQL_ENABLE_CONSOLE` and enter the value `true`.
-11. Click on the **Deploy** button at the top right.
+4. Copy and paste the following into the **Repository URL** `https://github.com/kintoproj/kinto-examples`.
+5. Enter the path to the subfolder: ./todo-hasura
+6. Click on the **Connect** button.
+7. Type `Dockerfile` in the **Dockerfile Name** field.
+8. Type `8080` in the **Port** field.
+9. Click the **Environment Variables** tab.
+10. Add the **key** `HASURA_GRAPHQL_DATABASE_URL` and paste in the **Connection String (Admin)** from the previous step as the **value**.
+11. Add the **key** `HASURA_GRAPHQL_ENABLE_CONSOLE` and enter the value `true`.
+12. Click on the **Deploy** button at the top right.
 
 <img
   alt="Hasura Environment Variables"
@@ -72,13 +73,14 @@ You can deploy it with the following steps:
 1. Click on the **Create Service** button at the top right.
 2. Click on the **Web App** service.
 3. Click on the **Import URL** tab.
-4. Copy and paste the following into the **Repository URL** `https://github.com/kintohub-examples/todo-react`.
-5. Click on the **Connect** button.
-6. Type `Dockerfile` in the **Dockerfile Name** field.
-7. Type `5000` in the **Port** field.
-8. Click on the **Environment Variables** tab.
-9. Add the **key** `REACT_APP_SERVER_URL` and paste the **GraphQL Endpoint URL** from the previous step as the **value**.
-10. Click on the **Deploy** button.
+4. Copy and paste the following into the **Repository URL** `https://github.com/kintoproj/kinto-examples`.
+5. Enter the path to the subfolder: ./todo-react
+6. Click on the **Connect** button.
+7. Type `Dockerfile` in the **Dockerfile Name** field.
+8. Type `5000` in the **Port** field.
+9. Click on the **Environment Variables** tab.
+10. Add the **key** `REACT_APP_SERVER_URL` and paste the **GraphQL Endpoint URL** from the previous step as the **value**.
+11. Click on the **Deploy** button.
 
 <img
   alt="React Webapp Environment Variables"

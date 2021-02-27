@@ -8,8 +8,9 @@ A sample Koa app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintohub-examples/koa
-- **Branch:** master
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./koa
+- **Branch:** main
 - **Language:** NodeJS
 - **Language version:** 12
 - **Build Command:** `npm install`
@@ -23,9 +24,9 @@ A sample Koa app for [KintoHub](https://kintohub.com)
 - Clone the repository to a folder of choice.
 
 ```
-$ git clone https://github.com/kintohub-examples/koa
+$ git clone https://github.com/kintoproj/kinto-examples
 
-$ cd koa
+$ cd kinto-examples/koa
 ```
 
 - Install the dependencies
