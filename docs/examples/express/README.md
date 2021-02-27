@@ -8,7 +8,8 @@ A sample Express app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/express
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./express
 - **Branch:** main
 - **Language:** NodeJS
 - **Language version:** 12

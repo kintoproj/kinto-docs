@@ -8,7 +8,8 @@ A sample Go app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Web App
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/go
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./go
 - **Branch:** main
 - **Language:** Go
 - **Language version:** 1.10.0

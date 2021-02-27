@@ -8,7 +8,8 @@ A sample NextJS with Apollo app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Web App
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/nextjs
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./nextjs
 - **Branch:** main
 - **Language:** NodeJS
 - **Language version:** 13

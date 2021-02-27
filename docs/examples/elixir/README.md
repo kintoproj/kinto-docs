@@ -8,7 +8,8 @@ A sample elixir app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/elixir
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./elixir
 - **Branch:** main
 - **Language:** Elixir
 - **Language version:** 1.10
@@ -25,7 +26,8 @@ An **Elixir** example can be deployed using `Dockerfile` on KintoHub
 ### :dolphin: Deploying with Dockerfile
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/elixir
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./elixir
 - **Branch:** main
 - **Language:** Dockerfile
 - **Dockerfile Name:** Dockerfile

@@ -8,7 +8,8 @@ A sample ruby app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Web App
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/ruby
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./ruby
 - **Branch:** main
 - **Language:** Ruby
 - **Language version:** 2.5

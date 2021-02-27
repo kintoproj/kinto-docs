@@ -8,7 +8,8 @@ A sample Beego app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/beego
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./beego
 - **Branch:** main
 - **Language:** Go
 - **Language version:** 1.13

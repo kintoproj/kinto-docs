@@ -8,7 +8,8 @@ A sample Django app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/django
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./django
 - **Branch:** main
 - **Language:** Python
 - **Language version:** 3.7

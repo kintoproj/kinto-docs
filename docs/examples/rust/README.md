@@ -8,7 +8,8 @@ A sample rust app for [KintoHub](https://kintohub.com)
 ## :rocket: Deploying on KintoHub
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/rust
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./rust
 - **Branch:** main
 - **Language:** Rust
 - **Language version:** 1
@@ -25,7 +26,8 @@ The **Rust** example can be deployed using `Dockerfile` on KintoHub
 ### :dolphin: Deploying with Dockerfile
 
 - **Service Type:** Backend API
-- **Repo:** https://github.com/kintoproj/kinto-examples/tree/main/rust
+- **Repo:** https://github.com/kintoproj/kinto-examples
+- **Subfolder Path:** ./rust
 - **Branch:** main
 - **Language:** Dockerfile
 - **Dockerfile Name:** Dockerfile
