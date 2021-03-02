@@ -67,4 +67,4 @@ After running this command, open `localhost:3000` in your browser to view the re
 
 ## :ambulance: Support
 
-**Slack:** https://join.slack.com/t/kintogoons/shared_invite/zt-mu6bvg79-BmkkdMRRwohJioZggXVYeA
+**Slack:** https://slack.kintohub.com/
