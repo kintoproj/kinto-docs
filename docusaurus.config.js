@@ -35,7 +35,7 @@ module.exports = {
         },
         {
           label: "Examples",
-          to: "examples/nodejs/nodejs-example",
+          to: "examples/introduction",
           position: "right",
         },
         { label: "Blog", to: "blog", position: "right" },
@@ -69,7 +69,7 @@ module.exports = {
             },
             {
               label: "Examples",
-              to: "/examples/nodejs/nodejs-example",
+              to: "/examples/introduction",
             },
           ],
         },
@@ -87,7 +87,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/kintohub/",
+              href: "https://github.com/kintoproj/",
             },
           ],
         },

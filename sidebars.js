@@ -39,6 +39,7 @@ module.exports = {
       "catalogs/mysql",
     ],
     Examples: [
+      "examples/introduction",
       {
         type: "category",
         label: "Node",
