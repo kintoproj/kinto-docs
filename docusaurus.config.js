@@ -87,7 +87,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/kintohub/",
+              href: "https://github.com/kintoproj/",
             },
           ],
         },
