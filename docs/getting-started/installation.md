@@ -22,6 +22,8 @@ The chart will do the following:
 
 ## Installing the chart
 
+If you are experienced with Kubernetes, you can customize your installation [here](advanced-installation.md).
+
 ### Prerequisites
 
 - [Argo Workflow](https://github.com/argoproj/argo-workflows)
