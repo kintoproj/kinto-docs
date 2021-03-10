@@ -129,8 +129,41 @@ helm upgrade --install kinto \
 
 ### Configure and Access KintoHub
 
-Follow the instructions displayed after the chart installation is successful. 
-You should be able to access the dashboard once you have setup the DNS. 
+In order to configure KintoHub dashboard and the services it deploy, you should configure your DNS with the instructions shown after KintoHub is installed. 
+
+i.e. You should see the following instruction after you install KintoHub:
+
+```sh
+######################################
+
+SETUP:
+
+1.  Get the IP of your Load Balancer.
+    NOTE: It may take a few minutes for the LoadBalancer public IP to be available!
+
+    You can watch the status of the service by running `kubectl get svc -n kintohub -w kinto-nginx-ingress-controller`.
+    export LB_IP=$(kubectl get service kinto-nginx-ingress-controller -n kintohub -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
+    echo ${LB_IP}
+    
+...
+```
+
+Execute the following line (it may return empty but just wait a while, as the load balancer may take time to setup )
+
+```sh
+export LB_IP=$(kubectl get service kinto-nginx-ingress-controller -n kintohub -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
+echo ${LB_IP}
+
+> 104.248.96.100
+```
+
+Configure the A record with the IP you got on your DNS provider.
+
+For example on cloudflare if you have a domain `example.com`:
+
+![DNS Setup](/img/get-started/dns-setup.png)
+
+All your subdomain `*.kinto.example.com` are now pointed to KintoHub. i.e. your services deployed by KintoHub should have the url like `services-ae21234.kinto.example.com`, and at the same time you can access the dashboard at `dashboard.kinto.example.com` 
 
 ## Uninstall the chart
 
