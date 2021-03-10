@@ -69,15 +69,13 @@ argo-server-7869fd4b96-xn8gw               1/1     Running   0          62s
 argo-workflow-controller-b68ffccb5-jx7vq   1/1     Running   0          62s
 ```
 
-### If SSL is enabled
+### Install Cert-Manager
 
 - [Cert Manager](https://cert-manager.io/docs/)
 
   > **Note:** KintoHub has been tested with cert-manager chart v0.15.0.
 
 - You must have a domain name ready to be used. KintoHub only supports Cloudflare at the moment, you can create a free account and transfer your domain ownership easily. Please create an issue if you want to add more providers.
-
-### Install Cert-Manager
 
 Run
 
@@ -124,6 +122,7 @@ helm upgrade --install kinto \
               --set builder.workflow.docker.username= \
               --set builder.workflow.docker.password= \
               --set minio.resources.requests.memory=null \
+              --set nginx-ingress-controller.service.type=LoadBalancer \
               --namespace kintohub kintohub/kinto
 ```
 
