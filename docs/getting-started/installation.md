@@ -34,12 +34,12 @@ If you are experienced with Kubernetes, you can customize your installation [her
 
 ### Install Argo Workflow
 
-Run
+
+_Notes: for `containerd` runtime, you need to add `--set controller.containerRuntimeExecutor=kubelet` (k8s +1.20)_
 
 ```sh
 kubectl create namespace argo
 helm repo add argo https://argoproj.github.io/argo-helm
-# Notes: for `containerd` runtime, you need to add `--set controller.containerRuntimeExecutor=kubelet` (k8s +1.20)
 helm upgrade --install argo \
               --version 0.16.6 \
               --set installCRD=true \
@@ -57,27 +57,14 @@ helm upgrade --install argo \
               --namespace argo argo/argo
 ```
 
-Check if argo is running fine.
-
-Run
-
-```sh
-kubectl get pods -n argo
-
-NAME                                       READY   STATUS    RESTARTS   AGE
-argo-server-7869fd4b96-xn8gw               1/1     Running   0          62s
-argo-workflow-controller-b68ffccb5-jx7vq   1/1     Running   0          62s
-```
-
 ### Install Cert-Manager
 
 - [Cert Manager](https://cert-manager.io/docs/)
 
   > **Note:** KintoHub has been tested with cert-manager chart v0.15.0.
 
-- You must have a domain name ready to be used. KintoHub only supports Cloudflare at the moment, you can create a free account and transfer your domain ownership easily. Please create an issue if you want to add more providers.
+_You must have a domain name ready to be used. KintoHub only supports Cloudflare at the moment, you can create a free account and transfer your domain ownership easily. Please create an issue if you want to add more providers._
 
-Run
 
 ```sh
 kubectl create namespace cert-manager
@@ -88,64 +75,62 @@ helm upgrade --install cert-manager \
               --namespace cert-manager jetstack/cert-manager
 ```
 
-Check if cert-manager is running fine.
-
-Run
-
-```sh
-kubectl get pods -n cert-manager
-
-NAME                                       READY   STATUS    RESTARTS   AGE
-cert-manager-766d5c494b-wl4bq              1/1     Running   0          33s
-cert-manager-cainjector-6649bbb695-l5rb2   1/1     Running   0          33s
-cert-manager-webhook-68d464c8b-hvpf6       1/1     Running   0          33s
-```
-
 ### Install KintoHub
 
-Run
+This will install KintoHub with **PUBLIC** dashboard access. 
+For more secure setup, please check our [advanced installation](advanced-installation.md).
+
+Don't forget the change the values inside the curly braces. 
+
 
 ```sh
 kubectl create ns kintohub
 helm repo add kintohub https://kintoproj.github.io/kinto-helm
-## Every parameter below (except minio) needs to be changed so that they fit your configuration.
-## Check `values.yaml` file if you want more information about these parameters.
+
+helm upgrade --install kinto \
+              --set common.domainName='{your_domain}' \
+              --set common.ssl.enabled=true \
+              --set common.ssl.issuer.email={your_email} \
+              --set common.ssl.issuer.solver.cloudflare.email={your_cloudflare_account} \
+              --set common.ssl.issuer.solver.cloudflare.cloudflareApiToken={your_cloudflare_api_token} \
+              --set builder.env.IMAGE_REGISTRY_HOST={your_image_registry_host} \
+              --set builder.workflow.docker.registry={your_image_registry_api_host} \
+              --set builder.workflow.docker.email={your_image_registry_email} \
+              --set builder.workflow.docker.username={your_image_registry_username} \
+              --set builder.workflow.docker.password={your_image_registry_password} \
+              --set minio.resources.requests.memory=null \
+              --set nginx-ingress-controller.service.type=LoadBalancer \
+              --set core.ingress.enabled=true \
+              --set dashboard.ingress.enabled=true \             
+              --namespace kintohub kintohub/kinto
+```
+
+This is an example for the configuration using `oss.kintohub.net` as domain, with `dockerhub` as image registry (public).
+
+```sh
+
 helm upgrade --install kinto \
               --set common.domainName='oss.kintohub.net' \
               --set common.ssl.enabled=true \
               --set common.ssl.issuer.email=devaccounts@kintohub.com \
               --set common.ssl.issuer.solver.cloudflare.email=devaccounts@kintohub.com \
-              --set common.ssl.issuer.solver.cloudflare.cloudflareApiToken= \
-              --set builder.env.IMAGE_REGISTRY_HOST=registry.digitalocean.com/kintohub \
-              --set builder.workflow.docker.registry=registry.digitalocean.com \
+              --set common.ssl.issuer.solver.cloudflare.cloudflareApiToken={cloudflare-api-token} \
+              --set builder.env.IMAGE_REGISTRY_HOST=kintohub \
+              --set builder.workflow.docker.registry=https://index.docker.io/v1/ \
               --set builder.workflow.docker.email=devaccounts@kintohub.com \
-              --set builder.workflow.docker.username= \
-              --set builder.workflow.docker.password= \
+              --set builder.workflow.docker.username=kintohub \
+              --set builder.workflow.docker.password={dockerhub-api-token} \
               --set minio.resources.requests.memory=null \
               --set nginx-ingress-controller.service.type=LoadBalancer \
+              --set core.ingress.enabled=true \
+              --set dashboard.ingress.enabled=true \             
               --namespace kintohub kintohub/kinto
-```
-
-Check if kintohub is running fine.
-
-Run
-
-```sh
-kubectl get pods -n kintohub
-
-NAME                                                              READY   STATUS    RESTARTS   AGE
-kinto-builder-64cb848858-vjwp8                                    1/1     Running   0          56s
-kinto-core-7f9b8777c9-pwfv7                                       1/1     Running   0          56s
-kinto-dashboard-645776fc5b-mj2xz                                  1/1     Running   0          56s
-kinto-minio-5fdd9859bd-x5g7n                                      1/1     Running   0          56s
-kinto-nginx-ingress-controller-5774d868cb-mcktf                   1/1     Running   0          56s
-kinto-nginx-ingress-controller-default-backend-66549b79f8-7cmtx   1/1     Running   0          56s
-kinto-proxless-65487b797c-jf7cd                                   1/1     Running   0          56s
 ```
 
 ### Configure and Access KintoHub
 
-Follow the instructions displayed after the chart installation is successful.
+Follow the instructions displayed after the chart installation is successful. 
+You should be able to access the dashboard once you have setup the DNS. 
 
 ## Uninstall the chart
 
