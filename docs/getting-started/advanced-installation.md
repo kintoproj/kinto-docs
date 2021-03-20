@@ -11,11 +11,12 @@ If you are not experienced with cloud configuration, please check our [installat
 Please follow our [installation guide](installation.md) to install [Argo Workflow](installation.md#install-argo-workflow) and [Cert Manager](installation.md##install-cert-manager) instead.
 If you are not planning to support SSL certificates, please omit the installation for `Cert Manager`.
 
-
 ## Install KintoHub
 
 Run the following steps depending on the setup you want.  
-Each one of the following steps are "incremental", you must run all the steps prior to the setup your chose.
+Each one of the following steps are "incremental", you must run all the steps prior to the setup you chose (i.e. which means you cannot skip the commands in the middle).
+
+For example, you cannot run `Enable Public Access to Deployed Services` and `Expose the Dashboard publicly` without running `Enable HTTPS support to Deployed Services`.
 
 ### Minimum Configuration
 
@@ -24,12 +25,22 @@ This will install KintoHub with minimum settings, which is on a local cluster wi
 ```sh
 export KINTO_ARGS="--set minio.resources.requests.memory=null \
 --set minio.makeBucketJob.resources.requests.memory=null \
---set builder.env.IMAGE_REGISTRY_HOST=kintohub \
---set builder.workflow.docker.registry=https://index.docker.io/v1/ \
---set builder.workflow.docker.email=devaccounts@kintohub.com \
---set builder.workflow.docker.username=docker-username \
---set builder.workflow.docker.password=docker-password"
+--set builder.env.IMAGE_REGISTRY_HOST={registry_host} \
+--set builder.workflow.docker.registry={docker_registry_fqdn} \
+--set builder.workflow.docker.email={docker_registry_email} \
+--set builder.workflow.docker.username={docker_registry_account_username} \
+--set builder.workflow.docker.password={docker_registry_account_password}"
 ```
+
+#### Variables
+
+| Variable | Description |
+| ------------- | ----------- |
+| `builder.env.IMAGE_REGISTRY_HOST` | The registry host for downloading the image used by [kinto-build](https://github.com/kintoproj/kinto-builder/blob/main/kinto-build/.env-example#L8). |
+| `builder.workflow.docker.registry` | The FQDN for your docker registry. Check [here](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line) for more information. (For dockerhub please use `https://index.docker.io/v1/` instead. |
+| `builder.workflow.docker.email` | Your Docker email. |
+| `builder.workflow.docker.username` | Your Docker username. |
+| `builder.workflow.docker.password` | Your Docker password. |
 
 ### Enable Public Access to Deployed Services 
 
@@ -38,8 +49,14 @@ Adding the following arguments will expose the web services deployed publicly.
 ```sh
 export KINTO_ARGS="${KINTO_ARGS} \
 --set nginx-ingress-controller.service.type=LoadBalancer \
---set common.domainName=oss.kintohub.net"
+--set common.domainName={your_domain}"
 ```
+
+#### Variables
+
+| Variable | Description |
+| ------------- | ----------- |
+| `common.domainName` | Your domain for the dashboard and the services that deployed. |
 
 ### Enable HTTPS support to Deployed Services
 
@@ -48,10 +65,18 @@ Adding the following arguments will allow KintoHub setup SSL automatically, in w
 ```sh
 export KINTO_ARGS="${KINTO_ARGS} \
 --set common.ssl.enabled=true \
---set common.ssl.issuer.email=devaccounts@kintohub.com \
---set common.ssl.issuer.solver.cloudflare.email=devaccounts@kintohub.com \
---set common.ssl.issuer.solver.cloudflare.cloudflareApiToken=cf-token"
+--set common.ssl.issuer.email={ssl_provider_email} \
+--set common.ssl.issuer.solver.cloudflare.email={cloudflare_email} \
+--set common.ssl.issuer.solver.cloudflare.cloudflareApiToken={cloudflare_api_token}"
 ```
+
+#### Variables
+
+| Variable | Description |
+| ------------- | ----------- |
+| `common.ssl.issuer.email` | Your email for the SSL certificates generated. |
+| `common.ssl.issuer.solver.cloudflare.email` | The email of your cloudflare account. |
+| `common.ssl.issuer.solver.cloudflare.cloudflareApiToken` | You [cloudflare API token](https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys#12345680). |
 
 
 ### Expose the Dashboard publicly
@@ -64,13 +89,7 @@ export KINTO_ARGS="${KINTO_ARGS} \
 --set dashboard.ingress.enabled=true"
 ```
 
-
 ### Install KintoHub
-
-Please be noticed that the commands above are considered "incremental", which means you cannot skip the commands in the middle.
-
-For example, you cannot run `Enable Public Access to Deployed Services` and `Expose the Dashboard publicly` without running `Enable HTTPS support to Deployed Services`.
-
 
 After arguments are set, run the following commands to install KintoHub.
 
