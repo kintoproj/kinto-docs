@@ -3,6 +3,7 @@ module.exports = {
     "Getting Started": [
       "getting-started/introduction",
       "getting-started/installation",
+      "getting-started/advanced-installation",
       "getting-started/fullstack-example",
     ],
     Features: [
