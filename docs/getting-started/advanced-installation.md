@@ -3,8 +3,8 @@ id: advanced-installation
 title: Advanced Installation
 ---
 
-This is only for users that have basic understanding on cloud infrastructure and Kubernetes. 
-If you are not experienced with cloud configuration, please check our [installation guide](installation.md) instead. 
+This is only for users that have basic understanding on cloud infrastructure and Kubernetes.  
+If you are not experienced with cloud configuration, please check our [installation guide](installation.md) instead.
 
 ## Prerequisites
 
@@ -29,26 +29,7 @@ export KINTO_ARGS="--set minio.resources.requests.memory=null \
 --set builder.workflow.docker.registry={docker_registry_fqdn} \
 --set builder.workflow.docker.email={docker_registry_email} \
 --set builder.workflow.docker.username={docker_registry_account_username} \
---set builder.workflow.docker.password={docker_registry_account_password}"
-```
-
-#### Variables
-
-| Variable | Description |
-| ------------- | ----------- |
-| `builder.env.IMAGE_REGISTRY_HOST` | The registry host for downloading the image used by [kinto-build](https://github.com/kintoproj/kinto-builder/blob/main/kinto-build/.env-example#L8). |
-| `builder.workflow.docker.registry` | The FQDN for your docker registry. Check [here](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line) for more information. (For dockerhub please use `https://index.docker.io/v1/` instead. |
-| `builder.workflow.docker.email` | Your Docker email. |
-| `builder.workflow.docker.username` | Your Docker username. |
-| `builder.workflow.docker.password` | Your Docker password. |
-
-### Enable Public Access to Deployed Services 
-
-Adding the following arguments will expose the web services deployed publicly.
-
-```sh
-export KINTO_ARGS="${KINTO_ARGS} \
---set nginx-ingress-controller.service.type=LoadBalancer \
+--set builder.workflow.docker.password={docker_registry_account_password} \
 --set common.domainName={your_domain}"
 ```
 
@@ -56,7 +37,21 @@ export KINTO_ARGS="${KINTO_ARGS} \
 
 | Variable | Description |
 | ------------- | ----------- |
-| `common.domainName` | Your domain for the dashboard and the services that deployed. |
+| `builder.env.IMAGE_REGISTRY_HOST` | The registry host for pushing/pulling the container images. |
+| `builder.workflow.docker.registry` | The FQDN for your docker registry. Check [here](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line) for more information. (For dockerhub please use `https://index.docker.io/v1/` instead. |
+| `builder.workflow.docker.email` | Your Docker email. |
+| `builder.workflow.docker.username` | Your Docker username. |
+| `builder.workflow.docker.password` | Your Docker password. |
+| `common.domainName` | Your domain name used for dashboard, core and the services you are gonna deployed. |
+
+### Enable Public Access to Deployed Services
+
+Adding the following arguments will expose the web services deployed publicly.
+
+```sh
+export KINTO_ARGS="${KINTO_ARGS} \
+--set nginx-ingress-controller.service.type=LoadBalancer"
+```
 
 ### Enable HTTPS support to Deployed Services
 
@@ -77,7 +72,6 @@ export KINTO_ARGS="${KINTO_ARGS} \
 | `common.ssl.issuer.email` | Your email for the SSL certificates generated. |
 | `common.ssl.issuer.solver.cloudflare.email` | The email of your cloudflare account. |
 | `common.ssl.issuer.solver.cloudflare.cloudflareApiToken` | You [cloudflare API token](https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys#12345680). |
-
 
 ### Expose the Dashboard publicly
 
