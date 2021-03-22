@@ -51,3 +51,5 @@ kubectl port-forward svc/kinto-core 8090 -n kintohub
 
 kubectl port-forward svc/kinto-dashboard 5000 -n kintohub
 ```
+
+Open [localhost:5000](http://localhost:5000).
