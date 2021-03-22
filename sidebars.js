@@ -6,6 +6,9 @@ module.exports = {
       "getting-started/advanced-installation",
       "getting-started/fullstack-example",
     ],
+    Cloud: [
+      "installation/minikube",
+    ],
     Features: [
       "features/cli",
       "features/environment",

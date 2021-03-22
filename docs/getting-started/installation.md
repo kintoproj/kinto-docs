@@ -34,7 +34,6 @@ If you are experienced with Kubernetes, you can customize your installation [her
 
 ### Install Argo Workflow
 
-
 _Notes: for `containerd` runtime, you need to add `--set controller.containerRuntimeExecutor=kubelet` (k8s +1.20)_
 
 ```sh
@@ -65,7 +64,6 @@ helm upgrade --install argo \
 
 _You must have a domain name ready to be used. KintoHub only supports Cloudflare at the moment, you can create a free account and transfer your domain ownership easily. Please create an issue if you want to add more providers._
 
-
 ```sh
 kubectl create namespace cert-manager
 helm repo add jetstack https://charts.jetstack.io
@@ -77,11 +75,10 @@ helm upgrade --install cert-manager \
 
 ### Install KintoHub
 
-This will install KintoHub with **PUBLIC** dashboard access. 
+This will install KintoHub with **PUBLIC** dashboard access.
 For more secure setup, please check our [advanced installation](advanced-installation.md).
 
-Don't forget the change the values inside the curly braces. 
-
+Don't forget the change the values inside the curly braces.
 
 ```sh
 kubectl create ns kintohub
