@@ -98,6 +98,7 @@ helm upgrade --install kinto \
               --set minio.resources.requests.memory=null \
               --set nginx-ingress-controller.service.type=LoadBalancer \
               --set core.ingress.enabled=true \
+              --set core.secretKey={your_kinto_secret_to_protect_the_dashboard} \
               --set dashboard.ingress.enabled=true \             
               --namespace kintohub kintohub/kinto
 ```
@@ -120,13 +121,14 @@ helm upgrade --install kinto \
               --set minio.resources.requests.memory=null \
               --set nginx-ingress-controller.service.type=LoadBalancer \
               --set core.ingress.enabled=true \
+              --set core.secretKey=k1nT0!c0R3!53cr3T \
               --set dashboard.ingress.enabled=true \             
               --namespace kintohub kintohub/kinto
 ```
 
 ### Configure and Access KintoHub
 
-In order to configure KintoHub dashboard and the services it deploy, you should configure your DNS with the instructions shown after KintoHub is installed. 
+In order to configure KintoHub dashboard and the services it deploy, you should configure your DNS with the instructions shown after KintoHub is installed.
 
 i.e. You should see the following instruction after you install KintoHub:
 
