@@ -80,8 +80,13 @@ Adding the following arguments will expose the dashboard to public. This action 
 ```sh
 export KINTO_ARGS="${KINTO_ARGS} \
 --set core.ingress.enabled=true \
+--set core.secretKey={your_kinto_secret} \
 --set dashboard.ingress.enabled=true"
 ```
+
+| Variable | Description |
+| ------------- | ----------- |
+| `core.secretKey` | Authentication key used to protect kinto core and kinto dashboard. |
 
 ### Install KintoHub
 
