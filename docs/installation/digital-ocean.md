@@ -14,7 +14,7 @@ Once everything is setup you should be able to access the Kubernetes cluster wit
 
 ## Install Cert Manager
 
-Install Cert Manager from our [installation guide](installation/installation#install-cert-manager) if you require auto TLS certificate for your exposed services.
+Install Cert Manager from our [installation guide](./installation#install-cert-manager) if you require auto TLS certificate for your exposed services.
 
 ## Install Argo Workflow
 
@@ -39,13 +39,13 @@ helm upgrade --install argo \
     --namespace argo argo/argo
 ```
 
-It is similar to our [installation guide](../installation/installation.md#install-argo-workflow) to install [Argo Workflow](https://argoproj.github.io/projects/argo/),
+It is similar to our [installation guide](./installation.md#install-argo-workflow) to install [Argo Workflow](https://argoproj.github.io/projects/argo/),
 except we need to have the flag `--set controller.containerRuntimeExecutor=kubelet` on, since Digital Ocean is using the latest Kubernetes version (1.20+).
 
 ## Install KintoHub
 
 The installation is identical to [installation guide](installation/installation.md#install-kintohub) or 
-[advanced installation guide](installation/advanced-installation.md#install-kintohub).
+[advanced installation guide](./advanced-installation.md#install-kintohub).
 For the example below, it will create a secured dashboard with token authentication, exposing everything publicly, 
 and everything services deployed are secured with TLS. (* This will create a Load Balancer which charges $10 per month)
 
