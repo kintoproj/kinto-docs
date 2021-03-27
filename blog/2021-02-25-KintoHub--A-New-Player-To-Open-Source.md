@@ -51,4 +51,4 @@ The rest is 100% the same. Out of the box, you get:
 - Deploy static sites, web apps, backend APIs, background workers, databases, and jobs
 - Enable “sleeping” your services when they aren’t used with a single click
 
-[Try it out](https://www.kintohub.com/getting-started/installation) and give us your feedback so that we can improve the way we use Kubernetes together!
+[Try it out](https://www.kintohub.com/installation/installation) and give us your feedback so that we can improve the way we use Kubernetes together!

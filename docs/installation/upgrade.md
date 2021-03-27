@@ -1,4 +1,7 @@
-# Upgrade your KintoHub
+---
+id: upgrade
+title: Upgrade your KintoHub
+---
 
 After you have installed your KintoHub instance on your Kubernetes cluster, 
 it would be nice to keep it always up-to-date for more new features and/or bug fixes.
@@ -9,7 +12,7 @@ this can be easily done and you can expect a 0 downtime in most cases!
 ## Prerequisites
 
 Make sure you have installed your KintoHub correctly.
-If it is not installed yet, check our [Installation Guide](../getting-started/installation.md).
+If it is not installed yet, check our [Installation Guide](../installation/installation.md).
 
 ```shell
 # List the helm release
