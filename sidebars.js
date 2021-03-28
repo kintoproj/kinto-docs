@@ -2,12 +2,14 @@ module.exports = {
   someSidebar: {
     "Getting Started": [
       "getting-started/introduction",
-      "getting-started/installation",
-      "getting-started/advanced-installation",
       "getting-started/fullstack-example",
     ],
-    Cloud: [
+    Installation: [
+      "installation/installation",
+      "installation/advanced-installation",
+      "installation/upgrade",
       "installation/minikube",
+      "installation/digital-ocean",
     ],
     Features: [
       "features/cli",

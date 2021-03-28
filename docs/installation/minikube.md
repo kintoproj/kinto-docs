@@ -1,6 +1,6 @@
 ---
 id: minikube
-title: Minikube
+title: Install On Minikube
 ---
 
 > The cloud is just someone else's computer.
@@ -14,7 +14,7 @@ Then run `minikube start` in order to start your cluster locally.
 
 ## Install KintoHub
 
-Follow our [installation guide](../getting-started/installation.md#install-argo-workflow) to install [Argo Workflow](https://argoproj.github.io/projects/argo/).
+Follow our [installation guide](../installation/installation.md#install-argo-workflow) to install [Argo Workflow](https://argoproj.github.io/projects/argo/).
 
 Change the values inside the curly braces and run
 
