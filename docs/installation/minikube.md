@@ -29,7 +29,8 @@ helm upgrade --install kinto \
               --set builder.workflow.docker.email={docker_registry_email} \
               --set builder.workflow.docker.username={docker_registry_account_username} \
               --set builder.workflow.docker.password={docker_registry_account_password} \
-              --set common.domainName={your_domain}
+              --set common.domainName={your_domain} \
+              --set builder.env.ARGO_WORKFLOW_VOLUME_SIZE=2Gi \
               --namespace kintohub kintohub/kinto
 ```
 
