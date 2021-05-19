@@ -41,11 +41,6 @@ module.exports = {
           position: "right",
         },
         { label: "Blog", to: "blog", position: "right" },
-        {
-          label: "Login",
-          to: "https://app.kintohub.com/login",
-          position: "right",
-        },
         //{ label: 'FAQ', to: 'getting-started/faq', position: 'right' },
       ],
     },
